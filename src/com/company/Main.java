@@ -68,11 +68,13 @@ public class Main {
                     System.out.println("ERROR!,the size entered is not correct, please choose from available options" + e);
                 } catch (ArrayIndexOutOfBoundsException e) {
                     System.out.println("ERROR!, the number entered does not match the list, try again" + e);
+                }catch(NullPointerException e){
+                    System.out.println("ERROR!, size entered does not exist" + e);
                 }
             }
         }
         System.out.println("you have completed your order");
-        System.out.println("the size you ordered was" + pizzaSize + "toppings: ");
+        System.out.println(" the size you ordered was " + pizzaSize + " toppings: ");
         for (int i = 0; i < toppingsList.length; i++) {
             System.out.println(topping[i]);
         }
